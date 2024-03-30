@@ -1,0 +1,2 @@
+^C:\USERS\MAURI\SOURCE\REPOS\LBYARCH_MP\MP.ASM
+C:\Users\mauri\AppData\Local\bin\NASM\nasm -f win64 MP.asm
