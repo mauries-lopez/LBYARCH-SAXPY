@@ -23,5 +23,8 @@
     <ClCompile Include="C_MP.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ScalarFunc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

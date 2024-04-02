@@ -1,67 +1,74 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
 
-//extern long long int sum(long long int a1, long long int a2, long long int* a3);
-//extern int sub(int var1, int var2);
-//extern float mul(int scalar, float vectorValue);
+/// <summary>
+/// Returns a random value in between the lower and upper bounds, inclusive of both
+/// </summary>
+/// <param name="lower">Lower bound</param>
+/// <param name="upper">Upper bound</param>
+/// <returns>A random value.</returns>
+int getBoundedRand(int lower, int upper){
+	return rand() % (upper - lower + 1) + lower;
+}
+
+//This works perfectly, visual studio just doesn't like this and throws an error even though
+//it clearly builds and works and is callable.
+extern float asmComputeSAXPY(int a, float x, float y);
 
 int main()
 {
-	/*
-	long long int a1, a2, a3, ans;
-	a1 = 512;
-	a2 = 1024;
-	a3 = 5;
-	ans = sum(a1, a2, &a3);
-	printf("%lld + %lld = %lld \n", a1, a2, ans);
-	printf("new A3 value is %lld", a3);
-
-	int var1 = 5, var2 = 5, difference = 0;
-	difference = sub(var1, var2);
-	printf("Answer: %d", difference);
-
-	*/
-
 	//Initialize Variables
-	int i = 0;
-	int scalarValue = 2;
-	float vectorX[10] = { 1.0, 2.0, 3.0 };
-	float vectorXValue = 0.0;
-	float vectorY[10] = { 11.0, 12.0, 13.0 };
-	float vectorYValue = 0.0;
+	int i = 0; //Counter variable
+	srand(50); //Initialize seed for random func
+	double aveTime = 0.0;
 
-	float ans = 0.0;
-	float vectorZ[10] = { 0 };
+	long long int n = (long long int)pow(2, 10); //Length of vectors
+	int scalarValue = 2; //A
 
-	/*
-	//Scalar Input
-	printf("Scalar Value: ");
-	scanf_s("%d", &scalarValue);
+	float *ptrX, *ptrY, *ptrZ;	//x,y,z
+	ptrX = (float*) malloc(n * sizeof(float));
+	ptrY = (float*) malloc(n * sizeof(float));
+	ptrZ = (float*) malloc(n * sizeof(float));
 
-	//Vector X Input
-	for (i = 0; i <= scalarValue; i++) {
-		printf("[%d] Vector X Value: ", i);
-		scanf_s("%f", &vectorXValue);
-		vectorX[i] = vectorXValue;
+	if(ptrX && ptrY && ptrZ){
+		int lower = 1, upper = 100;
+		for(i = 0; i < n; i++){
+			*(ptrX + i) = (float)getBoundedRand(lower, upper);
+			*(ptrY + i) = (float)getBoundedRand(lower, upper);
+			*(ptrZ + i) = 0.0;
+		}
+
+		for(i = 0; i < 30; i++){
+			int j;
+
+			clock_t begin = clock();
+				//==============================================C KERNEL CALL
+				computeSAXPY(scalarValue, n, ptrX, ptrY, ptrZ);
+
+				//==============================================ASM KERNEL CALL
+				//for(j = 0; j < n; j++)  
+					//*(ptrZ + j) = asmComputeSAXPY(scalarValue, *(ptrX + j), *(ptrY + j));
+
+			clock_t end = clock();
+
+			int k = 0;
+			if(n > 10) k = 10;
+			else k = (int)n;
+
+			for (j = 0; j < k; j++) {
+				printf("[%d] : a= %d, x= %.1f, y= %.1f, z= %.1f\n", j+1, scalarValue, *(ptrX + j), *(ptrY + j), *(ptrZ + j));
+			}
+			printf("Run #%d Time spent doing calculation for n = %lld: %lf\n", i+1, n, (double)(end - begin)/CLOCKS_PER_SEC);
+			aveTime += (double)(end - begin)/CLOCKS_PER_SEC;
+		}
+		printf("\nAverage time for 30 executions for n = %lld is %lf\n", n, aveTime/30);
 	}
-
-	//Vector Y Input
-	for (i = 0; i <= scalarValue; i++) {
-		printf("[%d] Vector Y Value: ", i);
-		scanf_s("%f", &vectorYValue);
-		vectorY[i] = vectorYValue;
-	}
-	*/
-
-	//Compute SAXPY
-	for (i = 0; i <= scalarValue; i++) {
-		ans = (scalarValue * vectorX[i]) + vectorY[i];
-		vectorZ[i] = ans;
-	}
-
-	//Check Values
-	for (i = 0; i <= scalarValue; i++) {
-		printf("\n[%d] : %.1f", i, vectorZ[i]);
-	}
+	else{
+		printf("something has gone horribly wrong. Most likely n was too big...");
+		return 1;
+	}	
 	
 	return 0;
 }

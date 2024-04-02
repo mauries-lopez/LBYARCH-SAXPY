@@ -22,12 +22,13 @@
     <CustomBuild Include="MP.asm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\mauri\AppData\Local\bin\NASM\nasm -f win64 MP.asm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"C:\Program Files (x86)\SASM\NASM\nasm" -f win64 MP.asm</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MP.obj</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C_MP.c" />
+    <ClCompile Include="ScalarFunc.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
