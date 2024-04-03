@@ -22,51 +22,74 @@ int main()
 	//Initialize Variables
 	int i = 0; //Counter variable
 	srand(50); //Initialize seed for random func
-	double aveTime = 0.0;
+	double sumTime_C = 0.0;
+	double sumTime_ASM = 0.0;
 
-	long long int n = (long long int)pow(2, 10); //Length of vectors
+	int exp = 26; //==============================================================EXPONENT (MANUAL INPUT)
+	long long int n = (long long int)pow(2, exp); //Length of vectors
 	int scalarValue = 2; //A
 
-	float *ptrX, *ptrY, *ptrZ;	//x,y,z
+	float *ptrX, *ptrY, *ptrZ_C, *ptrZ_ASM;	//x,y,z
 	ptrX = (float*) malloc(n * sizeof(float));
 	ptrY = (float*) malloc(n * sizeof(float));
-	ptrZ = (float*) malloc(n * sizeof(float));
+	ptrZ_C = (float*) malloc(n * sizeof(float));
+	ptrZ_ASM = (float*) malloc(n * sizeof(float));
 
-	if(ptrX && ptrY && ptrZ){
+	if(ptrX && ptrY && ptrZ_C && ptrZ_ASM){
 		int lower = 1, upper = 100;
 		for(i = 0; i < n; i++){
 			*(ptrX + i) = (float)getBoundedRand(lower, upper);
 			*(ptrY + i) = (float)getBoundedRand(lower, upper);
-			*(ptrZ + i) = 0.0;
+			*(ptrZ_C + i) = 0.0;
+			*(ptrZ_ASM + i) = 0.0;
 		}
 
 		for(i = 0; i < 30; i++){
 			int j;
 
-			clock_t begin = clock();
+			clock_t begin_C = clock();
 				//==============================================C KERNEL CALL
-				computeSAXPY(scalarValue, n, ptrX, ptrY, ptrZ);
+				computeSAXPY(scalarValue, n, ptrX, ptrY, ptrZ_C);
+			clock_t end_C = clock();
 
+			clock_t begin_ASM = clock();
 				//==============================================ASM KERNEL CALL
-				//for(j = 0; j < n; j++)  
-					//*(ptrZ + j) = asmComputeSAXPY(scalarValue, *(ptrX + j), *(ptrY + j));
-
-			clock_t end = clock();
+				for(j = 0; j < n; j++)  
+					*(ptrZ_ASM+ j) = asmComputeSAXPY(scalarValue, *(ptrX + j), *(ptrY + j));
+			clock_t end_ASM = clock();
 
 			int k = 0;
 			if(n > 10) k = 10;
 			else k = (int)n;
 
 			for (j = 0; j < k; j++) {
-				printf("[%d] : a= %d, x= %.1f, y= %.1f, z= %.1f\n", j+1, scalarValue, *(ptrX + j), *(ptrY + j), *(ptrZ + j));
+				printf("\n[%-2d] : a= %-3d, x= %-5.1f, y= %-5.1f, z(C)= %-5.1lf & z(ASM)= %-5.1lf", j+1, scalarValue, *(ptrX + j), *(ptrY + j), *(ptrZ_C + j), *(ptrZ_ASM + j));
+				if( *(ptrZ_C + j) == *(ptrZ_ASM + j)){
+					printf("\tSANITY CHECK PASSED: BOTH EQUAL AND CORRECT (C is known correct)");
+				}
+				else{
+					printf("OH NO! SANITY CHECK FAILED! ONE ISN'T EQUAL");
+				}
 			}
-			printf("Run #%d Time spent doing calculation for n = %lld: %lf\n", i+1, n, (double)(end - begin)/CLOCKS_PER_SEC);
-			aveTime += (double)(end - begin)/CLOCKS_PER_SEC;
+			printf("\nRun #%d (C): Time spent doing calculation for n = %lld(2^%d): %lf\n", i+1, n, exp, (double)(end_C - begin_C)/CLOCKS_PER_SEC);
+			printf("Run #%d (ASM): Time spent doing calculation for n = %lld(2^%d): %lf\n", i+1, n, exp, (double)(end_ASM - begin_ASM)/CLOCKS_PER_SEC);
+			sumTime_C += (double)(end_C - begin_C)/CLOCKS_PER_SEC;
+			sumTime_ASM += (double)(end_ASM - begin_ASM)/CLOCKS_PER_SEC;
 		}
-		printf("\nAverage time for 30 executions for n = %lld is %lf\n", n, aveTime/30);
+		printf("\nC: Total time for 30 executions for n = %lld(2^%d) is %.8lf\n", n, exp, sumTime_C);
+		printf("C: Average time is %lf\n", sumTime_C/30);
+		printf("ASM: Total time for 30 executions for n = %lld(2^%d) is %.8lf\n", n, exp, sumTime_ASM);
+		printf("ASM:  Average time is %lf\n", sumTime_ASM/30);
+
+		if(sumTime_C < sumTime_ASM)
+			printf("C is on average faster than ASM for n = %lld(2^%d) by %lf!", n, exp, (sumTime_ASM/30) - (sumTime_C/30));
+		else
+			printf("ASM is on average faster than C for n = %lld(2^%d) by %lf!", n, exp, (sumTime_C/30) - (sumTime_ASM/30));
+
+		printf("\n\n");
 	}
 	else{
-		printf("something has gone horribly wrong. Most likely n was too big...");
+		printf("something has gone horribly wrong. Most likely n was too big... Your exponent was %d", exp);
 		return 1;
 	}	
 	
