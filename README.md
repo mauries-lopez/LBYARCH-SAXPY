@@ -110,6 +110,8 @@ Furthermore, using only the fastest total average execution time among the two P
 
 The table and figure show that **in debug mode the x86-64 kernel is faster than the C kernel. While in release mode, the C kernel is faster than the x86-64 kernel**.
 
+To conform the results to our claim that x86-64 should be faster than a high-level language, we tried setting up the **Build in Parallel** option on the debug and release mode in the assembly file. However, it yielded inconclusive results.
+
 Overall, **the average execution time of x86-64 is slower than C**. The group outlines 2 possible reasons made from inferences with working with Visual Studios, first, the code implemented in C is more optimized than the code in x86-64. Thus, giving C less execution time. Second, every time Visual Studio needs to run the Assembly code, it needs to invoke the assembler (NASM) through the command line. Add to that having to output the .asm file into a .obj object just for it to link with the Main C program.
 
 ### Abstract *(Program output of C and x86-64 w/ Correctness Check)*
