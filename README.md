@@ -69,12 +69,12 @@ where positive difference means the x86-64 kernel is indeed faster than the C ke
 | `2^15` | `0.000000` | `0.000067` |
 | `2^20` | `0.000600` | `0.001800` |
 | `2^24` | `0.009733` | `0.025533` |
-| `2^26` | `0.009733` | `0.025533` |
-| Total | `0.020066` | `0.052933` |
+| `2^26` | `0.038033` | `0.098900` |
+| Total | `0.048366` | `0.126300` |
 
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/7d6f30dc-832e-4bc8-b4f1-d478ae8ab123)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/bf7b13f1-e798-4894-845c-d5e0b7b0a2ac)
 
-While on release mode, the **C kernel is still faster than the x86-64 kernel** by a difference of **-0.032867** seconds in average execution time. 
+While on release mode, the **C kernel is still faster than the x86-64 kernel** by a difference of **-0.077934** seconds in average execution time. 
 
 ### Analysis of the Results
 #### Which PC is the fastest in executing the kernels?
