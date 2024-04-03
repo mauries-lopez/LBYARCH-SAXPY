@@ -105,3 +105,15 @@ Furthermore, using only the fastest total average execution time among the two P
 
 The table and figure show that in every mode, **x86-64 kernel is slower than C kernel**. According to 
 
+### Abstract *(Program output of C and x86-64 w/ Correctness Check)*
+#### 2^15
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/e1c7876c-7c83-4321-b89c-5c722d0fc96b)
+#### 2^20
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/c287493c-f15b-4ca9-9967-97d878352e17)
+#### 2^24
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/cc847d9f-6cd5-4536-97dc-79b793215254)
+#### 2^26
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/b5ad986c-1397-4ce6-9b47-5f6e6293959b)
+
+
+
