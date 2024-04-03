@@ -91,7 +91,7 @@ Additionally, to further understand how Visual Studio uses the CPU to execute th
 
 ![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/b26672ae-fa75-4682-9a79-e0e333a8a6d1)
 
-In the provided image above, it is visible that CPU capabilities are being used to run the program through showing how much of CPU usage that a function consumes.
+In the provided image above, it is visible that CPU capabilities are being used to run the program by showing how much CPU usage a function consumes.
 
 #### Which Kernel is the fastest?
 This question is also asked because we want to determine if the x86-64 kernel is truly faster than the C kernel. After all, according to the lessons that have been discussed, there are 3 levels of program code: high-level language, assembly language, and hardware representation.
