@@ -97,7 +97,7 @@ Furthermore, using only the fastest total average execution time among the two P
 
 | Kernel | Debug Mode | Release Mode | Total |
 | :-------- | :------- | :------- | :------- | 
-| `C` | `0.187367` | `0.047766` | `0.235133` | 
+| `C` | `0.187367` | `0.047766` | `0.233300` | 
 | `x86-64` | `0.1696` | `0.127867` | `0.297467` |
 
 ![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/eb7c82c1-845a-4b07-902b-3c6fd4f7cfc4)
