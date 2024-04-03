@@ -1,2 +1,4 @@
-﻿  C_MP.c
-  LBYARCH_MP.vcxproj -> C:\Users\mauri\source\repos\LBYARCH_MP\x64\Debug\LBYARCH_MP.exe
+﻿  Performing Custom Build Tools
+  C_MP.c
+C:\Users\natha\Desktop\LBYARCH-SAXPY\LBYARCH_MP\C_MP.c(48,5): warning C4013: 'computeSAXPY' undefined; assuming extern returning int
+  LBYARCH_MP.vcxproj -> C:\Users\natha\Desktop\LBYARCH-SAXPY\LBYARCH_MP\x64\Debug\LBYARCH_MP.exe

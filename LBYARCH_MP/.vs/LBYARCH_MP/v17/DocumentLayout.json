@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mauri\\source\\repos\\LBYARCH_MP\\",
+  "WorkspaceRootPath": "C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E31CBB3B-8F35-49C7-9755-291B55CAFBA0}|LBYARCH_MP.vcxproj|C:\\Users\\mauri\\source\\repos\\LBYARCH_MP\\C_MP.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{E31CBB3B-8F35-49C7-9755-291B55CAFBA0}|LBYARCH_MP.vcxproj|C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\C_MP.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E31CBB3B-8F35-49C7-9755-291B55CAFBA0}|LBYARCH_MP.vcxproj|solutionrelative:C_MP.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E31CBB3B-8F35-49C7-9755-291B55CAFBA0}|LBYARCH_MP.vcxproj|C:\\Users\\mauri\\source\\repos\\LBYARCH_MP\\MP.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{E31CBB3B-8F35-49C7-9755-291B55CAFBA0}|LBYARCH_MP.vcxproj|C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\MP.asm||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{E31CBB3B-8F35-49C7-9755-291B55CAFBA0}|LBYARCH_MP.vcxproj|solutionrelative:MP.asm||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E31CBB3B-8F35-49C7-9755-291B55CAFBA0}|LBYARCH_MP.vcxproj|C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\ScalarFunc.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E31CBB3B-8F35-49C7-9755-291B55CAFBA0}|LBYARCH_MP.vcxproj|solutionrelative:ScalarFunc.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "C_MP.c",
-              "DocumentMoniker": "C:\\Users\\mauri\\source\\repos\\LBYARCH_MP\\C_MP.c",
+              "DocumentMoniker": "C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\C_MP.c",
               "RelativeDocumentMoniker": "C_MP.c",
-              "ToolTip": "C:\\Users\\mauri\\source\\repos\\LBYARCH_MP\\C_MP.c",
+              "ToolTip": "C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\C_MP.c",
               "RelativeToolTip": "C_MP.c",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-03-29T12:49:47.768Z",
               "EditorCaption": ""
@@ -37,14 +41,26 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MP.asm",
-              "DocumentMoniker": "C:\\Users\\mauri\\source\\repos\\LBYARCH_MP\\MP.asm",
+              "DocumentMoniker": "C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\MP.asm",
               "RelativeDocumentMoniker": "MP.asm",
-              "ToolTip": "C:\\Users\\mauri\\source\\repos\\LBYARCH_MP\\MP.asm",
+              "ToolTip": "C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\MP.asm",
               "RelativeToolTip": "MP.asm",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAC8AAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2024-03-28T12:45:05.335Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ScalarFunc.c",
+              "DocumentMoniker": "C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\ScalarFunc.c",
+              "RelativeDocumentMoniker": "ScalarFunc.c",
+              "ToolTip": "C:\\Users\\natha\\Desktop\\LBYARCH-SAXPY\\LBYARCH_MP\\ScalarFunc.c",
+              "RelativeToolTip": "ScalarFunc.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-04-02T02:58:06.567Z"
             }
           ]
         }

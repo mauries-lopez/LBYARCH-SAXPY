@@ -1,2 +1,2 @@
-^C:\USERS\MAURI\SOURCE\REPOS\LBYARCH_MP\MP.ASM
-C:\Users\mauri\AppData\Local\bin\NASM\nasm -f win64 MP.asm
+^C:\USERS\NATHA\DESKTOP\LBYARCH-SAXPY\LBYARCH_MP\MP.ASM
+"C:\Program Files (x86)\SASM\NASM\nasm" -f win64 MP.asm
