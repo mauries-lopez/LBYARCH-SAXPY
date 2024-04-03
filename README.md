@@ -103,7 +103,10 @@ Furthermore, using only the fastest total average execution time among the two P
 
 ![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/9ed68eb8-6f6f-40ec-a55e-8297dd8e5b9d)
 
-The table and figure show that in every mode, **x86-64 kernel is slower than C kernel**. According to 
+The table and figure show that **in debug mode the x86-64 kernel is faster than the C kernel. While in release mode, the C kernel is faster than the x86-64 kernel**.
+
+Overall, the execution time of x86-64 is slower than C. Due to ...
+
 
 ### Abstract *(Program output of C and x86-64 w/ Correctness Check)*
 #### 2^15
