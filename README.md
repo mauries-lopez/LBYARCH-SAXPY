@@ -18,7 +18,7 @@ The following computer specifications will be used for the comparative analysis:
 | `CPU` | `AMD Ryzen 5 5600G with Radeon Graphics (12 CPUs), ~3.9GHz` |
 | `RAM` | `16384MB` |
 
-Furthermore, the analysis test results are conducted using a value of `2` for `scalar` and `30` for the `number of execution times`. Also, the analysis test will only be executed `once` because there is not 
+Furthermore, the analysis test results are conducted using a value of `2` for `scalar`, `30` for the `number of execution times`, and randomized values for the 2 vector values. Also, the analysis test will only be executed `once` because there is not 
 much significant difference in the average execution time when running n number of times.
 
 ### PC 1: C vs x86-64 Average Execution Time Analysis
