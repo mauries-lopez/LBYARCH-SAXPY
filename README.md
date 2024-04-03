@@ -25,66 +25,65 @@ much significant difference in the average execution time when running n number 
 #### Debug Mode
 | Vector Size (n) | Average Time (C) | Average Time (x86-64) | 
 | :-------- | :------- | :------- | 
-| `2^15` | `0.000067` | `0.000100` |
-| `2^20` | `0.002700` | `0.002800` |
-| `2^24` | `0.044167` | `0.045800` |
-| `2^26` | `0.178833` | `0.184967` |
-| Total | `0.225767` | `0.233667` |
+| `2^15` | `0.000067` | `0.000000` |
+| `2^20` | `0.003167` | `0.003100` |
+| `2^24` | `0.044667` | `0.045500` |
+| `2^26` | `0.178733` | `0.183100` |
+| Total | `0.226634` | `0.231700` |
 
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/81527e20-3362-43b2-b7f9-559368494bee)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/25ed9b4d-0caa-4f4e-a596-d02943af22f7)
 
-During debug mode, the table and figure above show that **C kernel is faster than the x86-64 kernel** by a (C - x86-64) difference of **-0.007900** seconds in average execution time, where negative difference means C is indeed faster than x86-64.
+During debug mode, the table and figure above show that **C kernel is faster than the x86-64 kernel** by a (C - x86-64) difference of **-0.005066** seconds in average execution time, where negative difference means C is indeed faster than x86-64.
 
 #### Release Mode
 | Vector Size (n) | Average Time (C) | Average Time (x86-64) | 
 | :-------- | :------- | :------- | 
-| `2^15` | `0.000000` | `0.000033` |
-| `2^20` | `0.000467` | `0.002400` |
-| `2^24` | `0.009400` | `0.037867` |
-| `2^26` | `0.035600` | `0.155867` |
-| Total | `0.045467` | `0.1916167` |
+| `2^15` | `0.000033` | `0.000067` |
+| `2^20` | `0.000633` | `0.001700` |
+| `2^24` | `0.009600` | `0.029433` |
+| `2^26` | `0.035667` | `0.114900` |
+| Total | `0.045933` | `0.146100` |
 
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/328bef30-fcb0-40cd-ac25-781de9e3f3f6)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/97ac4101-13f8-4e8f-afd9-afee2e39ab29)
 
-While on release mode, the **C kernel is still faster than the x86-64 kernel** by a (C - x86-64) difference of **-0.1461497** seconds in average execution time. 
+While on release mode, the **C kernel is still faster than the x86-64 kernel** by a (C - x86-64) difference of **-0.100167** seconds in average execution time. 
 
 ### PC 2: C vs x86-64 Average Execution Time Analysis
 #### Debug Mode
 | Vector Size (n) | Average Time (C) | Average Time (x86-64) | 
 | :-------- | :------- | :------- | 
-| `2^15` | `0.000067` | `0.000133` |
-| `2^20` | `0.002200` | `0.002067` |
-| `2^24` | `0.037033` | `0.032100` |
-| `2^26` | `0.147167` | `0.134800` |
-| Total | `0.186467` | `0.169100` |
+| `2^15` | `0.000067` | `0.000000` |
+| `2^20` | `0.002400` | `0.002133` |
+| `2^24` | `0.037033` | `0.033967` |
+| `2^26` | `0.147867` | `0.133500` |
+| Total | `0.187367` | `0.169600` |
 
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/4c4fa8ba-613b-4b99-a72f-a25531a5d44f)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/c4a930da-f228-49d1-a71b-8ea33b85e9ff)
 
-During debug mode, the table and figure show that except for vector size 2^15, the x86-64 kernel is faster than the C kernel on the other vector sizes. Overall, **x86-64 kernel is faster than the C kernel** by a (C - x86-64) difference of **0.017367** seconds in average execution time, 
-where positive difference means the x86-64 kernel is indeed faster than the C kernel. 
+During debug mode, the table and figure show that the **x86-64 kernel is faster than the C kernel in all of the vector sizes** by a (C - x86-64) difference of **0.017767** seconds in average execution time, where positive difference means that x86-64 is indeed faster than C.
 
 #### Release Mode
 | Vector Size (n) | Average Time (C) | Average Time (x86-64) | 
 | :-------- | :------- | :------- | 
-| `2^15` | `0.000000` | `0.000067` |
-| `2^20` | `0.000600` | `0.001800` |
-| `2^24` | `0.009733` | `0.025533` |
-| `2^26` | `0.038033` | `0.098900` |
-| Total | `0.048366` | `0.126300` |
+| `2^15` | `0.000000` | `0.000100` |
+| `2^20` | `0.000600` | `0.001533` |
+| `2^24` | `0.009833` | `0.025267` |
+| `2^26` | `0.037367` | `0.100967` |
+| Total | `0.047800` | `0.127867` |
 
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/bf7b13f1-e798-4894-845c-d5e0b7b0a2ac)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/11928a49-51bc-4549-9f69-56d528608763)
 
-While on release mode, the **C kernel is still faster than the x86-64 kernel** by a difference of **-0.077934** seconds in average execution time. 
+While on release mode, the **C kernel is faster than the x86-64 kernel** by a difference of **-0.080067** seconds in average execution time. 
 
 ### Analysis of the Results
 #### Which PC is the fastest in executing the kernels?
 This question is asked because we want to determine if different computer specifications can affect the execution time of the kernels.
 | PC # | Debug Mode (Total Average Time in C) | Debug Mode (Total Average Time in x86-64) | Release Mode (Total Average Time in C) | Release Mode (Total Average Time in x86-64) | TOTAL |
 | :-------- | :------- | :------- | :------- | :------- | :------- | 
-| `PC1` | `0.225767` | `0.233667` | `0.045467` | `0.1916167` | `0.6965177` |
-| `PC2` | `0.186467` | `0.169100` | `0.020066` | `0.052933` | `0.428566` |
+| `PC1` | `0.226634` | `0.231700` | `0.045933` | `0.146100` | `0.650367` |
+| `PC2` | `0.187367` | `0.169600` | `0.047800` | `0.127867` | `0.532634` |
 
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/d394bab3-eea0-4827-85ba-7a68f95cbc80)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/f4b8ee08-8232-44d0-8d7d-3a3b24b2192d)
 
 The table and figure show that in all modes and kernels, **PC 2 contains a more powerful CPU than PC 1 and can execute the kernels faster than PC 1**. Hence, CPU specification matters in having a faster execution time which PC 2 overpowers PC 1 in this case.
 
@@ -98,25 +97,23 @@ Furthermore, using only the fastest total average execution time among the two P
 
 | Kernel | Debug Mode | Release Mode | Total |
 | :-------- | :------- | :------- | :------- | 
-| `C` | `0.186467` | `0.020066` | `0.206533` | 
-| `x86-64` | `0.169100` | `0.052933` | `0.222033` |
+| `C` | `0.187367` | `0.047766` | `0.235133` | 
+| `x86-64` | `0.1696` | `0.127867` | `0.297467` |
 
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/9ed68eb8-6f6f-40ec-a55e-8297dd8e5b9d)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/eb7c82c1-845a-4b07-902b-3c6fd4f7cfc4)
 
 The table and figure show that **in debug mode the x86-64 kernel is faster than the C kernel. While in release mode, the C kernel is faster than the x86-64 kernel**.
 
-Overall, the execution time of x86-64 is slower than C. Due to ...
-
+Overall, **the average execution time of x86-64 is slower than C**. A possible reason for this is that the code implemented in C is more optimized than the code in x86-64. Thus, giving C less execution time.
 
 ### Abstract *(Program output of C and x86-64 w/ Correctness Check)*
 #### 2^15
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/e1c7876c-7c83-4321-b89c-5c722d0fc96b)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/b8043746-4d28-49a9-be9a-58b17f1507fb)
 #### 2^20
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/c287493c-f15b-4ca9-9967-97d878352e17)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/b579344d-c391-4b19-8506-04a26e3ff419)
 #### 2^24
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/cc847d9f-6cd5-4536-97dc-79b793215254)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/1c583416-b4ec-4be0-b64e-420ddcb6fc0b)
 #### 2^26
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/b5ad986c-1397-4ce6-9b47-5f6e6293959b)
-
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/2353b4b0-20cb-4d25-bd87-485f144b8083)
 
 
