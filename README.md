@@ -87,6 +87,12 @@ This question is asked because we want to determine if different computer specif
 
 The table and figure show that in all modes and kernels, **PC 2 contains a more powerful CPU than PC 1 and can execute the kernels faster than PC 1**. Hence, CPU specification matters in having a faster execution time which PC 2 overpowers PC 1 in this case.
 
+Additionally, to further understand how Visual Studio uses the CPU to execute the program, we used the Performance Diagnostic Tools for CPU Usage.
+
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/b26672ae-fa75-4682-9a79-e0e333a8a6d1)
+
+In the provided image above, it is visible that CPU capabilities are being used to run the program.
+
 #### Which Kernel is the fastest?
 This question is also asked because we want to determine if the x86-64 kernel is truly faster than the C kernel. After all, according to the lessons that have been discussed, there are 3 levels of program code: high-level language, assembly language, and hardware representation.
 It is said that assembly language skips the first level which should make it more faster than high-level languages. An image is attached for a better visualization.
