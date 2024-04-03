@@ -1,4 +1,4 @@
-## x86-to-C Interface Programming Project
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/6d746490-b622-45d0-800f-998dcacc1ab5)## x86-to-C Interface Programming Project
 
 ### Comparative Result for C vs Assembly
 
@@ -74,7 +74,7 @@ where positive difference means the x86-64 kernel is indeed faster than the C ke
 
 ![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/7d6f30dc-832e-4bc8-b4f1-d478ae8ab123)
 
-While on release mode, the **C kernel is still faster than the x86-64 kernel** by a difference of **-0.509264** seconds in average execution time. 
+While on release mode, the **C kernel is still faster than the x86-64 kernel** by a difference of **-0.032867** seconds in average execution time. 
 
 ### Analysis of the Results
 #### Which PC is the fastest in executing the kernels?
@@ -98,10 +98,10 @@ Furthermore, using only the fastest total average execution time among the two P
 
 | Kernel | Debug Mode | Release Mode | Total |
 | :-------- | :------- | :------- | :------- | 
-| `C` | `0.186467` | `0.169100` | `0.355567` | 
-| `x86-64` | `0.020066` | `0.052933` | `0.072999` |
+| `C` | `0.186467` | `0.020066` | `0.206533` | 
+| `x86-64` | `0.169100` | `0.052933` | `0.222033` |
 
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/41997d6e-9e65-4aad-a3ac-00fbef220057)
+![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/9ed68eb8-6f6f-40ec-a55e-8297dd8e5b9d)
 
-The table and figure show that in every mode, **the x86-64 kernel has a faster total average execution time than the C kernel**. Hence, the x86-64 kernel is indeed faster than a high-level language.
+The table and figure show that in every mode, **x86-64 kernel is slower than C kernel**. According to 
 
