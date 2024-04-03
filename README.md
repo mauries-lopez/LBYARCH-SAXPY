@@ -1,4 +1,4 @@
-![image](https://github.com/mauries-lopez/LBYARCH-SAXPY/assets/102708347/6d746490-b622-45d0-800f-998dcacc1ab5)## x86-to-C Interface Programming Project
+## x86-to-C Interface Programming Project
 
 ### Comparative Result for C vs Assembly
 
